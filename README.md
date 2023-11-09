@@ -1,6 +1,6 @@
 # Titanic Survival Prediction - Flask Version
 
-This Flask application predicts the likelihood of survival for Titanic passengers based on input details. It is a Flask adaptation of the original Django project.
+This Flask application predicts the likelihood of survival for Titanic passengers based on input details.
 
 ## Table of Contents
   - [Installation](#installation)

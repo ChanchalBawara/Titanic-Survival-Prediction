@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Titanic Survival Prediction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px 40px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    input[type="text"] {
+      width: 94%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    input[type="reset"] {
+      background-color: #cd0505;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+
+    input[type="reset"]:hover {
+      background-color: #ed5f5f;
+    }
+
+    /* Style for radio buttons */
+    .radio-group {
+      display: flex;
+      align-items: center;
+    }
+
+    .radio-label {
+      margin-right: 10px;
+    }
+
+    /* Style for select dropdowns */
+    select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    /* Style for select options */
+    select option {
+      background-color: #fff;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Titanic Survival Prediction</h1>
+  <form action="{{ url_for('result') }}" method="get">
+
+    <p>Passenger Class:</p>
+    <select name="pclass">
+      <option value="1">1st Class</option>
+      <option value="2">2nd Class</option>
+      <option value="3">3rd Class</option>
+    </select>
+
+    <p>Sex:</p>
+    <select name="sex">
+      <option value="0">Male</option>
+      <option value="1">Female</option>
+    </select>
+
+    <p>Age:</p>
+    <input type="text" name="age" placeholder="25" required>
+
+    <p>Sibsp:</p>
+    <input type="text" name="sibsp" placeholder="2" required>
+
+    <p>Parch:</p>
+    <input type="text" name="parch" placeholder="1" required>
+
+    <p>Fare:</p>
+    <input type="text" name="fare" placeholder="50.00" required>
+
+    <p>Embark Category C:</p>
+    <select name="embC">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </select>
+
+    <p>Embark Category Q:</p>
+    <select name="embQ">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </select>
+
+    <p>Embark Category S:</p>
+    <select name="embS">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </select>
+
+    <br>
+    <input type="submit" value="Get Predictions">
+    <input type="reset" value="Clear">
+  </form>
+</body>
+
+</html>
